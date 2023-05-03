@@ -1,0 +1,62 @@
+[
+    {
+        "name":"Design",
+        "image":"https://res.cloudinary.com/hamstech/images/f_auto,q_auto/v1637134439/Hamstech%20App/Title-Image-4_80465274aebb5/Title-Image-4_80465274aebb5.jpg?_i=AA",
+        "price":3000,
+        "duration":"2-3 Weeks",
+        "tutore1Name":"Akash Deshpandey",
+        "tutre2Name":"Yash Gohil",
+        "tutore1":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI4i_4njk0cfR8NYBCSN7n4LoJJAwnutHMuQ&usqp=CAU",
+        "tutore2":"https://www.simplilearn.com/ice9/free_resources_article_thumb/Graphic_Designer_Salary_in_Canada.jpg",
+        "rating":"https://static.vecteezy.com/system/resources/thumbnails/009/663/928/small/5-star-rating-review-star-transparent-free-png.png",
+        "moreinfo":"You can lear frome best Graphic Desiger Teacher. We gantaned you that you can learn very Esily.",
+        "cource":"https://bestdigiservice.com/wp-content/uploads/2021/08/GRAPHIC-DESIGN-1024x1024.png",
+        "id":1
+    },
+    {
+        "name":"Devlopment",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaXNsBOB04xtHQU_k60lZaGVJdDrQdklyWxw&usqp=CAU",
+        "price":6000,
+        "duration":"4-5 Months",
+        "tutore1Name":"Vikash Modi",
+        "tutre2Name":"Ahmad Seikh",
+        "tutore1":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHksLYKdd696lVE2GXY5P4AUdWPlFCuiyD1g&usqp=CAU",
+        "tutore2":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNPOPDCWiEvN0x11fc_02MzdhtzcLOwg-qg&usqp=CAU",
+        "rating":"https://static.vecteezy.com/system/resources/thumbnails/009/663/928/small/5-star-rating-review-star-transparent-free-png.png",
+        "moreinfo":"You can lear frome best Devloper. We gantaned you that you can learn very Esily and Get job.",
+        "cource":"https://www.liveabout.com/thmb/shPOsLluhIW1qYbRaFRXwglPzGY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/web-developer-job-description-salary-and-skills-2061841_final-edit-01-ac18fd4e99df46e990e4277a821faa0f.jpg",
+        "id":2
+    },
+    {
+        "name":"It and Software",
+        "id":3
+    },
+    {
+        "name":"Marketing",
+        "id":4
+    },
+    {
+        "name":"Personal Devlopment",
+        "id":5
+    },
+    {
+        "name":"Business",
+        "id":6
+    },
+    {
+        "name":"Photography",
+        "id":7
+    },
+    {
+        "name":"Music",
+        "id":8
+    },
+    {
+        "name":"Engish",
+        "id":9
+    },
+    {
+        "name":"Drawing",
+        "id":10
+    }
+]
