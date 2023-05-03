@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: #52C1F7;
+    font-family:  "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* navbar styling */
+
+
+
+
+
+
+/* <------------************************************************--------------------------> */
+
+
+
+/* body styling */
+
+#card-container{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.card{
+    /* border: 1px solid black; */
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.card>.poster{
+    width: 100%;
+}
+.card>.category{
+    color: #3B3435;
+    font-weight: bolder;
+}
+.card .flex{
+    display: flex;
+    gap: 10px;
+}
+.card .buttons-wrapper{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.buttons-wrapper>button{
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 15px;
+    background: #009B5D;
+    color: white;
+    cursor: pointer;
+    font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+.buttons-wrapper>button:first-child{
+    background:  #268fc4;;
+}
+.buttons-wrapper>button:first-child:hover{
+    background:  #207caa;;
+}
+.buttons-wrapper>button:hover{
+    background: #038350;
+}
