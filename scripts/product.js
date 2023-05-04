@@ -39,7 +39,7 @@ function createCard(item){
     let divTutor1 = document.createElement("div");
     let tutor1=document.createElement("p");
     tutor1.className="tutor1";
-    tutor1.innerText = "Kshitiz Kumar Singh";
+    tutor1.innerText = "Kshitiz Kumar ";
     let img1 = document.createElement("img");
     img1.className = "tutor1_image"
     img1.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/image_47_a922f4522c.png";
