@@ -61,6 +61,3 @@ function createCard(item){
     return card;
 }
 
-
-
-
