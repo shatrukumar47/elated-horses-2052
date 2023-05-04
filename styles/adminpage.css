@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family:  "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* <-----------------------navbar styling------------------> */
+#navbar{
+    background: #239bd7;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+#navbar h1{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+#navbar > .search{
+    position: relative;
+}
+#navbar > .search:hover input[placeholder="Search..."]{
+    width: 700px;
+}
+input[placeholder="Search..."]{
+    width: 300px;
+    font-size: 30px;
+    line-height: 24px;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px; 
+    transition: 2s;
+
+}
+input[placeholder="Search..."]::placeholder{
+
+    color: #009B5D;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.fa-search{
+    font-size:30px;
+    color: #009B5D;
+    position: absolute; 
+    right:20px;
+    bottom: 10px;
+}
+
+
+
+
+/* <-----------------------end navbar styling------------------> */
+#container{
+    display: flex;
+
+    gap: 20px;
+}
+#admin-container{
+    width: 400px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #239bd7;
+}
+#user>img{
+    border-radius: 50%;
+}
+#user>h2{
+    color: white;
+    font-family: 'Rubik Storm', cursive;
+}
+#admin-container input{
+    margin-bottom: 10px;
+    height: 30px;
+}
+#admin-container button{
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+    background: #239bd7;
+    border: none;
+    color: white;
+    font-size: 18px;   
+}
+#admin-container button:hover{
+    background:  #207caa;
+    cursor: pointer;
+}
+#admin-container h3{
+    color:#009B5D;
+}
+#admin-container > .add-course{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background: white;
+}
+#admin-container > .update-course{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+#product-container{
+    border: 1px solid green;
+    width: 100%;
+}
+
+#product-container > .count{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: #009B5D;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#product-container > #product-list{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card{
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.card>.poster{
+    width: 100%;
+}
+.card>.category{
+    color: #3B3435;
+    font-weight: bolder;
+}
+.card .flex{
+    display: flex;
+    gap: 10px;
+}
+.card .buttons-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.buttons-wrapper>button{
+    border: none;
+    border-radius: 15px;
+    width: 80px;
+    padding: 10px;
+    background: red;
+    color: white;
+    cursor: pointer;
+    font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+.buttons-wrapper>button:first-child{
+    background:  #268fc4;;
+}
+.buttons-wrapper>button:first-child:hover{
+    background:  #207caa;;
+}
+.buttons-wrapper>button:hover{
+    background: rgb(120, 10, 10);
+}

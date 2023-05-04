@@ -20,9 +20,68 @@ body{
 
 
 /* body styling */
+.filter{
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background: #009B5D;
+    color: white;
+    height: 50px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.filter > .filter-by-price-range{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.filter > .filter-by-price-range>input{
+    height: 30px;
+    padding: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+.filter > .filter-by-price-range>input::placeholder{
+    color: #009B5D;
+}
+.filter > .filter-by-price-range>button{
+    background: #239bd7;
+    width: 100px;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+.filter > .filter-by-price-range>button:hover{
+    background: #52C1F7;
+    cursor: pointer;
+}
+.filter > select{
+    display: block;
+}
+.filter #sort-by-price,#filter-by-category{
+    background: #239bd7;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+.filter #filter-by-category:hover{
+    background: #52C1F7;
+    cursor: pointer;
+}
+.filter #sort-by-price:hover{
+    background: #52C1F7;
+    cursor: pointer;
+}
 #card-container{
-    /* border: 1px solid red; */
     width: 80%;
     margin: auto;
     display: grid;
@@ -30,7 +89,6 @@ body{
     gap: 20px;
 }
 .card{
-    /* border: 1px solid black; */
     padding: 15px;
     background: white;
     border-radius: 10px;
@@ -48,7 +106,6 @@ body{
     gap: 10px;
 }
 .card .buttons-wrapper{
-    /* border: 1px solid green; */
     display: flex;
     justify-content: flex-end;
     gap: 20px;
