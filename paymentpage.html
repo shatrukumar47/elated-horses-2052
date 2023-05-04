@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="./styles/paymentpage.css">
+</head>
+<body>
+    
+    <div id="payment-container">
+        <div class="left-div">
+            <div class="user-info">
+                <img src="./image/Learn Fast.png" alt="">
+                <h1>Hello! Shatrughan</h1>
+            </div>
+          <div class="animation">
+            <img src="https://cdn.dribbble.com/users/544967/screenshots/17486588/media/40c9324ce1576c26c9efa0f773d8b791.gif" alt="">
+          </div>
+        </div>
+        <div class="payment-info">
+            <div class="product-details">
+                <p>Course Name : Lorem ipsum dolor sit amet.</p>
+                <p>Category : Business</p>
+                <p>Price : 50000</p>
+            </div>
+            <div id="container">
+                <h1>Select a Payment Method</h1>
+                <div>
+                  <h3>We Accept</h3>
+                  <div>
+                    <img src="https://ii2.pepperfry.com/assets/w23-pf-visa.jpg" alt="" />
+                    <img
+                      src="https://ii3.pepperfry.com/assets/w23-pf-master-card.jpg"
+                      alt=""
+                    />
+                    <img
+                      src="https://ii1.pepperfry.com/assets/w23-pf-maestro.jpg"
+                      alt=""
+                    />
+          
+                    <img src="https://ii3.pepperfry.com/assets/w23-pf-rupay.jpg" alt="" />
+          
+                    <img
+                      src="https://ii3.pepperfry.com/assets/w23-pf-wallet.jpg"
+                      alt=""
+                    />
+                    <img
+                      src="https://ii3.pepperfry.com/assets/w23-pf-net-banking.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <h3>Card Details</h3>
+                <form>
+                  <label for="">Card Number</label>
+                  <input
+                    type="number"
+                    id="cardnumber"
+                    onKeyPress="if(this.value.length==12) return false;"
+                    placeholder="Card Number"
+                  />
+                  <div>
+                    <label for="">Expiry Month</label>
+                    <input
+                      type="number"
+                      id="expirymonth"
+                      onKeyPress="if(this.value.length==2) return false;"
+                      placeholder="MM"
+                    />
+                    <label for="">Expiry Year</label>
+                    <input type="number" id="expiryyear" onKeyPress="if(this.value.length==2) return false;" placeholder="YY" />
+                    <label for="">Security Code</label>
+                    <input type="number" id="cvv" onKeyPress="if(this.value.length==3) return false;" placeholder="CVV" />
+                  </div>
+                  <input type="submit" value="PROCEED TO PAY 🔒" id="submit" />
+                </form>
+              </div>
+        </div>
+       
+    </div>
+
+
+
+
+
+
+    <script src="./scripts/paymentpage.js"></script>
+</body>
+</html>
