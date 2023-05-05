@@ -113,3 +113,13 @@ cursor: pointer;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
+.thankyou-img{
+    display: none;
+    width: 500px;
+    position:absolute;
+    left: 35%;
+    top: 30%;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}

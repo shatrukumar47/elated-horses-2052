@@ -59,7 +59,6 @@ input[placeholder="Search..."]::placeholder{
 /* <-----------------------end navbar styling------------------> */
 #container{
     display: flex;
-
     gap: 20px;
 }
 #admin-container{
@@ -121,6 +120,7 @@ input[placeholder="Search..."]::placeholder{
 #product-container{
     border: 1px solid green;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 #product-container > .count{
@@ -179,4 +179,72 @@ input[placeholder="Search..."]::placeholder{
 }
 .buttons-wrapper>button:hover{
     background: rgb(120, 10, 10);
+}
+
+
+
+
+
+
+
+
+
+/* <--------------------------Footer Styling--------------------------------------------------------> */
+
+.footer{
+    width: 100%;
+    background: #F5F5F5;
+    margin-top: 50px;
+}
+.footer>.footer-box1{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+.footer>.footer-box1>div>a{
+    display: block;
+    line-height: 24px;
+    text-decoration: none;
+    color: #777977;
+}
+.footer>.footer-box1>div:last-child>img{
+    width: 70%;
+}
+
+.footer>.payment-partners{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 70% 30% ;
+    gap: 20px;
+}
+.footer>.payment-partners>div>div>img{
+    width: 76px;
+}
+.footer>.payment-partners>div:last-child > div > img{
+    width: 46px;
+}
+.footer>.terms-cond{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer>.terms-cond>a{
+    display: block;
+    line-height: 24px;
+    text-decoration: none;
+    color: #777977;
+}
+.footer>#copyright{
+    text-align: center;
+    margin: 20px;
+    line-height: 24px;
+    color: #777977;
 }
