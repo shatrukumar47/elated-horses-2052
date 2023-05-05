@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .line {
+            overflow: hidden;
+            text-align: center;
+            color: rgb(242, 236, 236);
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+        .line:before,
+
+        .line:after {
+            background-color: #b4a6a6;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+        .line:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+        .line:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+        div img{
+            width:55px;
+        }
+        #logo{
+            width:35px; 
+            /* height:50px ; */
+            
+           border-radius:50%; 
+           color: rgb(245, 239, 239);
+           margin-right: 10px;
+        }
+        #logo+label{
+            font-size: 25px;
+            color:rgb(62, 88, 183);
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            margin-bottom: -1px;
+        }
+        .logo+p{
+            font-size: 15px;
+            font-weight: bold;
+            color:rgb(194, 186, 186);
+        }
+        a{
+            color:rgb(47, 127, 232);
+        }
+        form{
+            width:396px;
+            height:548px;
+            color: rgb(249, 247, 247);
+            background-color: rgba(0,0,0, 0.829);
+            padding:40px 56px;
+            box-shadow: -1px 4px 28px 0px rgb(103, 180, 103);
+            /* box-shadow: 0px 0px 28px 40px rgb(103, 180, 103; */
+        }
+        h1{
+            margin-top: 5px ;
+            font-size: 35px;
+        }
+        form>div:nth-child(1){
+            /* background-color: rgba(103, 180, 103, 0.829) */
+        }
+        form div div.image{
+        margin:35px 0px ;
+        }
+        form div div.image img{
+            margin-right: 15px ;
+            width: 55px;
+            border-radius: 50%;
+        }
+        form div div.image img:hover{
+            box-shadow: 2px 2px 20px 4px rgb(157, 153, 153);
+        }
+        .line+p{
+            margin-top:35px;
+        }
+        p{
+            font-size: 18px;
+            color:rgb(234, 228, 228);
+        }
+    </style>
+</head>
+<!-- rgb(103, 180, 103); -->
+<body background="./Image/408355.jpg">
+    <form action="">
+    <div >
+        <div class="logo">
+            <img id="logo" src="./Image/LFLogo_adobe_express.svg" alt=""> 
+            <label>LEARN FAST</label> 
+       </div>
+        <p>Step 1 of 2</p>
+        <h1>Create an account</h1>
+        <div class="image">
+            <img src="https://auth.services.adobe.com/img/social/sml-google-logo.svg" alt="">
+            <img src="https://auth.services.adobe.com/img/social/f_logo_RGB-Blue_58.png" alt="">
+            <img src="https://auth.services.adobe.com/img/social/sml-apple-logo.svg" alt="">
+        </div>
+         <p class="line">Or</p>
+         <p>Sign up with email</p>
+         <p>Already have an account?<a href="#">Sign in</a></p>
+         <div>
+         <label >Email address</label>
+         <input type="email">
+         <label >Password</label>
+         <input type="password">
+         <input type="submit" value="Conitnue">
+        </div>
+     </div>
+    </form>
+    <p></p>
+
+</body>
+<script>
+</script>
+
+</html>
