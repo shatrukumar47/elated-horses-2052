@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses</title>
-    <link rel="stylesheet" href="./styles/coursesList.css">
-</head>
-<body>
-    <nav>
-        
-    </nav>
+    <link rel="stylesheet" href="./styles/coursesList.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    <style>
+      .wrapper {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .carousel {
+        width: 90%;
+        margin: 0px auto;
+      }
+      .slick-slide {
+        margin: 10px;
+      }
+      .slick-slide img {
+        width: 100%;
+        border: 2px solid #fff;
+      }
+      .wrapper .slick-dots li button:before {
+        font-size: 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav></nav>
+    <div class="wrapper">
+            <div class="carousel">
+              <div><img src="https://img.freepik.com/premium-photo/front-view-alphabet-letters-stacked-books-earth-globe-education-day_23-2149241026.jpg?size=626&ext=jpg"></div>
+              <div><img src="https://img.freepik.com/free-photo/english-book-resting-table-working-space_23-2149429625.jpg?size=626&ext=jpg"></div>
+              <div><img src="https://img.freepik.com/free-photo/virtual-classroom-study-space_23-2149178642.jpg?size=626&ext=jpg"></div>
+              <div><img src="https://img.freepik.com/free-photo/english-british-england-language-education-concept_53876-124292.jpg?size=626&ext=jpg"></div>
+              <div><img src="https://img.freepik.com/free-photo/toy-bricks_144627-6934.jpg?size=626&ext=jpg"></div>
+              <div><img src="https://img.freepik.com/free-photo/portrait-cheerful-young-girl-holding-books_171337-1639.jpg?size=626&ext=jpg"></div>
+            </div>
+      </div>
 
-    
     <div class="filter">
-             <select id="filter-by-category">
-                 <option value="">Choose Category</option>
-                 <option value="Design">Design</option>
-                 <option value="Devlopment">Development</option>
-                 <option value="It and Software">IT and Software</option>
-                 <option value="Marketing">Marketing</option>
-             </select>
-             <div class="filter-by-price-range">
-                <h3>Price Range</h3>
-                <input type="number" id="min-input" placeholder="Min Price...">
-                <p>-</p>
-                <input type="number" id="max-input" placeholder="Max Price...">
-                <button>Filter</button>
-           </div>
-            <select id="sort-by-price">
-                <option value="">Sort By Price</option>
-                <option value="hightolow">High to Low</option>
-                <option value="lowtohigh">Low to High</option>
-            </select>
-     </div>
+      <select id="filter-by-category">
+        <option value="">Choose Category</option>
+        <option value="Design">Design</option>
+        <option value="Devlopment">Development</option>
+        <option value="It and Software">IT and Software</option>
+        <option value="Marketing">Marketing</option>
+      </select>
+      <div class="filter-by-price-range">
+        <h3>Price Range</h3>
+        <input type="number" id="min-input" placeholder="Min Price..." />
+        <p>-</p>
+        <input type="number" id="max-input" placeholder="Max Price..." />
+        <button>Filter</button>
+      </div>
+      <select id="sort-by-price">
+        <option value="">Sort By Price</option>
+        <option value="hightolow">High to Low</option>
+        <option value="lowtohigh">Low to High</option>
+      </select>
+    </div>
 
-        
     <div id="card-container">
-        <!-- <div class="card">
+      <!-- <div class="card">
             <img src="" alt="">
             <h5></h5>
             <h3></h3>
@@ -51,10 +82,156 @@
             </div>
         </div> -->
     </div>
- 
+
+
+
+
     
+    <!-- ************************Footer************************************************** -->
+
+    <div class="footer">
+      <div class="footer-box1">
+        <div>
+          <h4>Company</h4>
+          <a href="">About Us</a>
+          <a href="">Careers</a>
+          <a href="">Blogs</a>
+          <a href="">Terms and conditions</a>
+        </div>
+        <div>
+          <h4>Useful Links</h4>
+          <a href="">User Guidelines</a>
+          <a href="">Site Map</a>
+          <a href="">Refund Policy</a>
+          <a href="">Takedown Policy</a>
+          <a href="">Grievance Redressal</a>
+        </div>
+        <div>
+          <h4>DISCOVER MOREs</h4>
+          <a href="">Discover Careers</a>
+          <a href="">Fast Learn Profile</a>
+          <a href="">Language</a>
+          <a href="">Personal Development</a>
+          <a href="">Teaching & Academics</a>
+          <a href="">>Media Centre</a>
+        </div>
+        <div>
+          <h4>Need Help?</h4>
+          <a href="">FAQs</a>
+          <a href="">Policies</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div>
+          <h4>Download our App</h4>
+          <img
+            src="https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-apple-appstore-logo_2x.png"
+            alt=""
+          />
+          <img
+            src="https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-google-playstore-logo_2x.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <div class="payment-partners">
+        <div>
+          <h4>We Accept</h4>
+          <div>
+            <img
+              src="https://ii2.pepperfry.com/assets/w23-pf-visa.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii3.pepperfry.com/assets/w23-pf-master-card.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii1.pepperfry.com/assets/w23-pf-maestro.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii2.pepperfry.com/assets/w23-pf-american-express.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii3.pepperfry.com/assets/w23-pf-rupay.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii2.pepperfry.com/assets/w23-pf-dinners-club.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii3.pepperfry.com/assets/w23-pf-wallet.jpg"
+              alt=""
+            />
+            <img
+              src="https://ii3.pepperfry.com/assets/w23-pf-net-banking.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div>
+          <h4>Follow us Here</h4>
+          <div>
+            <img
+              src="https://ii1.pepperfry.com/assets/w23-pf-social-insta.png"
+              alt=""
+            />
+            <img
+              src="https://ii1.pepperfry.com/assets/w23-pf-social-fb.png"
+              alt=""
+            />
+            <img
+              src="https://ii2.pepperfry.com/assets/w23-pf-social-pinterest.png"
+              alt=""
+            />
+            <img
+              src="https://ii1.pepperfry.com/assets/w23-pf-social-linkedin.png"
+              alt=""
+            />
+            <img
+              src="https://ii3.pepperfry.com/assets/w23-pf-social-youtube.png"
+              alt=""
+            />
+            <img
+              src="https://ii1.pepperfry.com/assets/w23-pf-social-twitter.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <div class="terms-cond">
+        <a href="">Whitechat</a>
+        <a href="">Sitemap</a>
+        <a href="">Terms Of Use</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Your Data and Security</a>
+        <a href="">Grievance Redressal</a>
+      </div>
+      <div id="copyright">© Copyright Fast Learn</div>
+      <br />
+      <br />
+      <br />
+          </div>
 
 
+
+
+
+
+          
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
     <script src="./scripts/coursesList.js"></script>
-</body>
+
+  </body>
 </html>

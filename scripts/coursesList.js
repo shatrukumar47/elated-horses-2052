@@ -1,3 +1,15 @@
+
+$(document).ready(function(){
+    $('.carousel').slick({
+    slidesToShow: 3,
+    dots:true,
+    centerMode: true,
+    });
+  });
+  
+
+
+
 let cardContainer = document.getElementById("card-container");
 Display();
 
