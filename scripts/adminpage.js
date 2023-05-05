@@ -1,16 +1,4 @@
-
-$(document).ready(function(){
-    $('.carousel').slick({
-    slidesToShow: 3,
-    dots:true,
-    centerMode: true,
-    });
-  });
-  
-
-
-
-let cardContainer = document.getElementById("card-container");
+let cardContainer = document.getElementById("product-list");
 Display();
 
 function Display(data){
@@ -30,24 +18,17 @@ function createCard(item){
     let category = document.createElement("p");
     category.className = "category"
     category.textContent = "Education"
-    let title = document.createElement("h2");
+    let title = document.createElement("h4");
     title.textContent = "Teaching English as a Foreign Language (TEFL)";
 
     let flexContainer = document.createElement("div");
     flexContainer.className = "flex-wrapper";
-    let flex1 = document.createElement("div");
-    flex1.className = "flex";
-    let iconImg1 = document.createElement("img");
-    iconImg1.src = "https://masaischool.com/courses/images/calender.svg";
-    let p1 = document.createElement("p");
-    p1.textContent = "Course starts on 29 May 2023"
-
     let flex2 = document.createElement("div");
     flex2.className = "flex";
     let iconImg2 = document.createElement("img");
-    iconImg2.src = "https://masaischool.com/courses/images/calender-clock.svg";
+    iconImg2.src = "https://masaischool.com/courses/images/calender.svg";
     let p2 = document.createElement("p");
-    p2.textContent = "Learn completely in 60 Days"
+    p2.textContent = `Tutor : ${item}`;
 
     let flex3 = document.createElement("div");
     flex3.className = "flex";
@@ -60,16 +41,18 @@ function createCard(item){
     btnDiv.className = "buttons-wrapper";
     let btn1 = document.createElement("button");
     let btn2 = document.createElement("button");
-    btn1.textContent = "VIEW DETAILS";
-    btn2.textContent = "APPLY NOW";
+    btn1.textContent = "EDIT";
+    btn2.textContent = "REMOVE";
 
     btnDiv.append(btn1,btn2);
-    flex1.append(iconImg1,p1);
     flex2.append(iconImg2,p2);
     flex3.append(iconImg3,p3);
-    flexContainer.append(flex1,flex2,flex3)
-    card.append(img,category,title,flex1,flexContainer,btnDiv);
+    flexContainer.append(flex2,flex3)
+    card.append(img,category,title,flexContainer,btnDiv);
 
     return card;
 }
+
+
+
 
