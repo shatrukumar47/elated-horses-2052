@@ -1,5 +1,103 @@
 
 
+body{
+    background: #52C1F7;
+} 
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+
+#container{
+    height: 1100px;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+   
+   
+.card_div{
+    width: 100%;
+    height: 400px;
+    border: 1px solid red;
+    text-align: center;
+    justify-content: center;
+}
+.card_div>div{
+    width: 40%;
+    height: 80%;
+    margin: auto;
+    margin-bottom:20px ;
+
+}
+.card_div>div>img{
+    height: 100%;
+    width:100%
+}
+
+
+.card_box{
+    width: 100%;
+    padding-top:20px;
+    border: 1px solid rgb(36, 0, 128);
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tutorCont{
+    display: flex;
+    /* height: 70%; */
+    width: 70%;
+    margin: auto;
+    justify-content: space-evenly;
+    border: 1px solid yellowgreen;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.tutorCont>div{
+    /* height:100%; */
+    width: 100%;
+    border: 1px solid rgb(38, 182, 134);
+    
+}
+.tutorCont>div>img{
+    /* height:90%; */
+    width: 60%;
+    padding-bottom: 10px;
+}
+
+.buttons{
+    width:50%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    border: 1px solid green;
+    margin: auto;
+}
+.buttons>button{
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 15px;
+    background: #009B5D;
+    color: white;
+    cursor: pointer;
+    font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+.buttons>button:first-child{
+    background:  #268fc4;;
+}
+.buttons>button:first-child:hover{
+    background:  #207caa;;
+}
+.buttons>button:hover{
+    background: #038350;
+
+
 
 
 

@@ -11,20 +11,50 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            color:black;
         }
 
+        .container{
+            display :flex ;
+            justify-content: space-around;
+            margin: auto;
+            max-width: 1280px;
+            height: 662px;
+        }
+        .section{
+            width: 510px;
+            height: 662px;            
+        }
+        .section:nth-child(1)
+        {
+            display: flex;
+            align-items: center;
+        }
+        #rightlogo{
+            width:50px;             
+           border-radius:50%; 
+           color: rgb(245, 239, 239);
+           margin-right: 10px;
+        }
+        #rightlogo+label{
+            font-size: 35px;
+            color:rgb(62, 88, 183);
+        }
+        .rightlogo{
+            display: flex;
+            align-items: center;
+            margin-bottom: -1px;
+        }
         .line {
             overflow: hidden;
             text-align: center;
-            color: rgb(242, 236, 236);
+            color: rgb(255, 249, 249);
             font-size: 20px;
             font-weight: 100;
         }
 
-        .line:before,
-
-        .line:after {
-            background-color: #b4a6a6;
+        .line:before,.line:after {
+            background-color: #8b8787;
             content: "";
             display: inline-block;
             height: 1px;
@@ -45,10 +75,8 @@
             width:55px;
         }
         #logo{
-            width:35px; 
-            /* height:50px ; */
-            
-           border-radius:50%; 
+            width:35px;
+          border-radius:50%; 
            color: rgb(245, 239, 239);
            margin-right: 10px;
         }
@@ -57,43 +85,42 @@
             color:rgb(62, 88, 183);
         }
         .logo{
-            display: flex;
+            display: none;
             align-items: center;
             margin-bottom: -1px;
         }
-        .logo+p{
-            font-size: 15px;
-            font-weight: bold;
-            color:rgb(194, 186, 186);
+        a{ 
+            color:rgba(23, 11, 243, 0.952);
+           
         }
-        a{
-            color:rgb(47, 127, 232);
-        }
-        form{
-            width:396px;
-            height:548px;
-            color: rgb(249, 247, 247);
-            background-color: rgba(0,0,0, 0.829);
+        .section2{
+            /* width:396px;
+            height:548px; */
+            width: 398px;
+            height: 582px;
+            /* color: rgb(253, 246, 246); */
+            background-color: #52c0f7bb;
             padding:40px 56px;
-            box-shadow: -1px 4px 28px 0px rgb(103, 180, 103);
+            box-shadow: -1px 4px 28px 0px rgb(24, 44, 48);
             /* box-shadow: 0px 0px 28px 40px rgb(103, 180, 103; */
+            /* -1px 4px 28px 0px */
         }
         h1{
             margin-top: 5px ;
             font-size: 35px;
         }
-        form>div:nth-child(1){
+        .section2>div:nth-child(1){
             /* background-color: rgba(103, 180, 103, 0.829) */
         }
-        form div div.image{
+        .section2 div div.image{
         margin:35px 0px ;
         }
-        form div div.image img{
+        .section2 div div.image img{
             margin-right: 15px ;
             width: 55px;
             border-radius: 50%;
         }
-        form div div.image img:hover{
+        .section2 div div.image img:hover{
             box-shadow: 2px 2px 20px 4px rgb(157, 153, 153);
         }
         .line+p{
@@ -101,19 +128,83 @@
         }
         p{
             font-size: 18px;
-            color:rgb(234, 228, 228);
+            /* color:rgb(30, 27, 27); */
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        form label{
+            color: gray;
+        }
+        form input{
+            font-size: 20px;
+            border: none;
+            border-bottom: solid 1px;
+            background-color: transparent;
+            margin-bottom: 10px;
+        }
+        form input:focus{
+            outline: none;
+        }
+        form input[type="submit"]{
+            border: none;
+            margin-top: 20px;
+            /* background-color:  rgb(82, 201, 237); */
+            /* border-radius:20px; */
+            /* color:rgba(23, 11, 243, 0.952); */
+            /* padding:3px 10px; */
+            font-size: 25px;
+            /* display:block; */
+            /* margin:auto; */
+        }
+        form input[type="submit"]:hover{
+            background-color:  rgb(134, 211, 234);
+        }
+        .formData{
+            display: none;
+        }
+        @media only screen and (max-width:1285px) {
+            .logo{
+                display: flex;
+            }
+            .rightlogo{
+                display: none;
+            }
+            .section{
+                display: none;
+            }
+            .container{
+                width: 700px;
+                border: 1px solid;
+                justify-content: space-evenly;
+            }
         }
     </style>
 </head>
+
 <!-- rgb(103, 180, 103); -->
-<body background="./Image/408355.jpg">
-    <form action="">
+<!-- <body background="./Image/low-poly-blue-background-5o6wzulr6o47bk0a.jpg">  -->
+     <body background="./Image/low-poly-blue-background-5o6wzulr6o47bk0a~2.jpg">
+     <!-- <body background="./Image/low-poly-blue-background-5o6wzulr6o47bk0a.jpg">
+            <body background="./Image/low-poly-blue-background-5o6wzulr6o47bk0a.jpg"> -->
+       
+   <div class="container">
+    <div class="section">
+
+        <div class="rightlogo">
+            <img id="rightlogo" src="./Image/LFLogo_adobe_express.svg" alt=""> 
+            <label>LEARN FAST</label> 
+       </div>
+    </div>
+
+    <div class="section2">
     <div >
         <div class="logo">
             <img id="logo" src="./Image/LFLogo_adobe_express.svg" alt=""> 
             <label>LEARN FAST</label> 
        </div>
-        <p>Step 1 of 2</p>
+        <!-- <p>Step 1 of 2</p> -->
         <h1>Create an account</h1>
         <div class="image">
             <img src="https://auth.services.adobe.com/img/social/sml-google-logo.svg" alt="">
@@ -122,17 +213,23 @@
         </div>
          <p class="line">Or</p>
          <p>Sign up with email</p>
-         <p>Already have an account?<a href="#">Sign in</a></p>
-         <div>
+         <p>Already have an account? <a href="#">Sign in</a></p>
+         <form>
          <label >Email address</label>
          <input type="email">
+         <label class="formData">First Name</label>
+         <input type="text" class="formData">
+         <label class="formData">last Name</label>
+         <input type="text" class="formData">
+         <label class="formData">Date of Birth</label>
+         <input type="date" class="formData">
          <label >Password</label>
          <input type="password">
-         <input type="submit" value="Conitnue">
-        </div>
+         <input type="submit" value="Continue">
+         </form>
      </div>
-    </form>
-    <p></p>
+    </div>
+</div>
 
 </body>
 <script>
