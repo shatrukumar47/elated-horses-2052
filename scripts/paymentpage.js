@@ -9,7 +9,6 @@ form.addEventListener("submit",function(e){
     let cvv = document.getElementById("cvv").value;
 
     if(cardNumber && expirymonth && expiryyear && cvv){
-        // takeInput(id,name,age,designation,priority,vaccine);
         checkOTP();
     }else{
         alert("Please fill all the parameters !!");
@@ -26,21 +25,11 @@ function checkOTP(){
     let verifyOtp = prompt("Enter OTP ");
 
     if(otp == verifyOtp){
-
-        alert(`${item.name} Added to Queue`);
-        setTimeout(function(){
-            alert(`Vaccinating ${item.name}`)
-        },5000)
-        setTimeout(function(){
-            alert(`${item.name} Vaccinated`)
-            vaccinatedData.push(item);
-            localStorage.setItem("vaccinated",JSON.stringify(vaccinatedData));
-            registerData.splice(index,1);
-            localStorage.setItem("register",JSON.stringify(registerData));
-            Display(registerData);
-        },10000)    
-
+        let paymentCont = document.getElementById("payment-container");
+        let thankyouImg = document.querySelector(".thankyou-img");
+        paymentCont.style.display = "none";
+        thankyouImg.style.display = "block"
     }else{
-        alert("wrong otp");
+        alert("Wrong OTP");
     }
 }
