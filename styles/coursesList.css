@@ -106,6 +106,9 @@ input::-webkit-inner-spin-button {
 
 .card>.poster{
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
 }
 .card>.category{
     color: #3B3435;
@@ -141,6 +144,10 @@ input::-webkit-inner-spin-button {
     background: #038350;
 }
 
+
+.active{
+    background-color: red;
+}
 
 
 /* <--------------------------Footer Styling--------------------------------------------------------> */
