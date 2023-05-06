@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <p id="remove">X</p>
+    </div>
+</body>
+</html>
+<script>
+    let remove=document.getElementById("remove")
+    let main=document.getElementById("main")
+    let course=JSON.parse(localStorage.getItem("visit-course"))||[]
+
+    function Display(data){
+        data.forEach((element,ind) => {
+            let card=document.createElement("div")
+            card.classList.add("card")
+            let title=document.createElement("div")
+            let img=document.createElement("img")
+            img.src=element.avatar
+            let name=document.createElement("h2")
+            name.innerText=element.name
+
+            title.append(img,name)
+            let detail=document.createElement("div")
+            let time=document.createElement("p")
+            time.innerText="Duration :"+element.duration
+            let price=document.createElement("p")
+            price.innerText="Price :"+element.price
+             
+            detail.append(time,price)
+
+            let tutor=document.createElement("div")
+            let t1=document.createElement("div")
+            let tut_img1=document.createElement("img")
+            tut_img1.src=element.tutore1_Image
+            let name1=document.createElement("h3")
+            name1.innerText=element.tutore1
+            let p1=document.createElement("p")
+            p1.innerText="Instructor"
+
+            t1.append(tut_img1,name1,p1)
+
+            let t2=document.createElement("div")
+            let tut_img2=document.createElement("img")
+            tut_img2.src=element.tutore2_Image
+            let name2=document.createElement("h3")
+            name2.innerText=element.tutore2
+            let p2=document.createElement("p")
+            p2.innerText="Instructor"
+
+            t2.append(tut_img2,name2,p2)
+
+            tutor.append(t1,t2)
+
+        });
+    }
+</script>

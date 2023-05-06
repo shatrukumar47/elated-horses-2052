@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #customers {
+#customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -29,16 +29,36 @@
   background-color: #04AA6D;
   color: white;
 }#review{
-    width: 70%;
+    width: 95%;
 }#review>img{
    width: 100%;
+}#view{
+    color: blue;
+}#delete{
+    color: red;
+}#nameLogo{
+    margin: auto;
+    width: 40%;
+    display: flex;
+    
+
+}#nameLogo>img{
+    width: 20%;
+    margin-left: 10px;
+}.invert{
+    width: 25px;
+}#rating{
+    width: 90%;
+    display: flex;
+    margin: auto;
 }
+
     </style>
 </head>
 <body>
     <div>
-        <h2>A broad selection of courses</h2>
-        <p>Choose from 213,000 online video courses with new additions published every month</p>
+        <h1>A broad selection of courses</h1>
+        <p style="font-size: 18px;">Choose from 213,000 online video courses with new additions published every month</p>
     </div>
     <table id="customers">
         <thead >
@@ -59,26 +79,35 @@
              
         </tbody>
     </table>
-    <div id="review">
-        <img src="./review/review.png" alt="err">
-    </div>
+    
+    
 </body>
 </html>
 <script>
     let tbody=document.querySelector("tbody")
     let bookmarkData=[]
+    let course=JSON.parse(localStorage.getItem("visit-course"))||[]
     DisplayData(bookmarkData)
     function DisplayData(arr){
         arr.forEach((element,ind) => {
             let tr=document.createElement("tr")
             let td1=document.createElement("td")
             let td2=document.createElement("td")
+            td2.innerText=element.name
             let td3=document.createElement("td")
+            td3.innerText=element.duration
             let td4=document.createElement("td")
+            td4.innerText=element.price
             let td5=document.createElement("td")
+            td5.innerText=element.tutore1
             let td6=document.createElement("td")
+            td6.innerText="View"
             let td7=document.createElement("td")
+            td6.className="view"
+            td7.innerText="Buy Now"
             let td8=document.createElement("td")
+            td8.className="delete"
+            td8.innerText="Delete"
             td8.addEventListener("click",()=>{
               let bookmarkData=bookmarkData.filter((ele,i)=>{
                 return ind!=i
@@ -90,9 +119,23 @@
             td7.addEventListener("click",()=>{
                 window.location.href="../payment.html"
             })
+            td6.addEventListener("click",()=>{
+                course.push(element)
+                localStorage.setItem("visit-course",JSON.stringify(course))
+                window.location.href="../bookView.html"
+            })
             tr.append(td1,td2,td3,td4,td5,td6,td7,td8)
             tbody.append(tr)
 
         });
+        let api="https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn"
+        fetch(api)
+        .then((res)=>{
+            return res.json()
+        })
+        .then((data)=>{
+            console.log(data);
+        })
+
     }
 </script>
