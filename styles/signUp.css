@@ -1,0 +1,158 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color:black;
+}
+
+.container{
+    display :flex ;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 1280px;
+    height: 662px;
+}
+.section{
+    width: 510px;
+    height: 662px;
+    display: flex;
+    align-items: center;            
+}
+#rightlogo{
+    width:50px;             
+   border-radius:50%; 
+   color: rgb(245, 239, 239);
+   margin-right: 10px;
+}
+#rightlogo+label{
+    font-size: 35px;
+    color:rgb(62, 88, 183);
+}
+.rightlogo{
+    display: flex;
+    align-items: center;
+    margin-bottom: -1px;
+}
+.line {
+    overflow: hidden;
+    text-align: center;
+    color: rgb(255, 249, 249);
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.line:before,.line:after {
+    background-color: #8b8787;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+.line:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.line:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+div img{
+    width:55px;
+}
+#logo{
+    width:35px;
+  border-radius:50%; 
+   color: rgb(245, 239, 239);
+   margin-right: 10px;
+}
+#logo+label{
+    font-size: 25px;
+    color:rgb(62, 88, 183);
+}
+.logo{
+    display: none;
+    align-items: center;
+    margin-bottom: -1px;
+}
+a{ 
+    color:rgba(23, 11, 243, 0.952);
+   
+}
+.section2{
+   
+    width: 398px;
+    height: 582px;
+    background-color: #52c0f7bb;
+    padding:40px 56px;
+    box-shadow: -1px 4px 28px 0px rgb(24, 44, 48);
+}
+h1{
+    margin-top: 5px ;
+    font-size: 35px;
+}
+.section2 div div.image{
+margin:35px 0px ;
+}
+.section2 div div.image img{
+    margin-right: 15px ;
+    width: 55px;
+    border-radius: 50%;
+}
+.section2 div div.image img:hover{
+    box-shadow: 2px 2px 20px 4px rgb(157, 153, 153);
+}
+.line+p{
+    margin-top:35px;
+}
+p{
+    font-size: 18px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    color: gray;
+}
+form input{
+    font-size: 20px;
+    border: none;
+    border-bottom: solid 1px;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+form input:focus{
+    outline: none;
+}
+form input[type="submit"]{
+    border: none;
+    margin-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color:  rgb(134, 211, 234);
+}
+form input[type="submit"]:hover{
+    background-color:  rgb(90, 206, 241);
+}
+.formData{
+    display: none;
+}
+@media only screen and (max-width:1285px) {
+    .logo{
+        display: flex;
+    }
+    .rightlogo{
+        display: none;
+    }
+    .section{
+        display: none;
+    }
+    .container{
+        width: 700px;                
+    }
+}
+
+
