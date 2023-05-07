@@ -1,4 +1,14 @@
 let form = document.querySelector("form");
+let applyData = JSON.parse(localStorage.getItem("applying-course")) || [];
+
+let title = document.getElementById("name");
+let category = document.getElementById("category");
+let price = document.getElementById("price");
+let payBtn = document.getElementById("submit");
+payBtn.value = `Pay ₹${applyData[0].price} 🔒`;
+title.textContent = `Title : ${applyData[0].name}`;
+category.textContent = `Category : ${applyData[0].category}`;
+price.textContent = `Price : ${applyData[0].price}`;
 
 form.addEventListener("submit",function(e){
     e.preventDefault();
@@ -33,3 +43,5 @@ function checkOTP(){
         alert("Wrong OTP");
     }
 }
+
+

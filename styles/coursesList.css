@@ -8,18 +8,85 @@ body{
     font-family:  "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* navbar styling */
+
+/***********************************navbar styling *********************************************************/
+
+#navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #52C1F8;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    padding: 5px;
+    
+}
+#navbar  img{
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#navbar img:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+#navbar > .search{
+    position: relative;
+    margin-left: 200px;
+}
+#navbar > .search:hover input[placeholder="Search..."]{
+    width: 700px;
+}
+input[placeholder="Search..."]{
+    width: 300px;
+    font-size: 30px;
+    line-height: 24px;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px; 
+    transition: 2s;
+
+}
+input[placeholder="Search..."]::placeholder{
+
+    color: #009B5D;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.fa-search{
+    font-size:30px;
+    color: #009B5D;
+    position: absolute; 
+    right:20px;
+    bottom: 10px;
+}
+#navbar>.icons{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 30px;
+}
+#navbar > .icons> a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+}
+#navbar > .icons> a:hover{
+    color: #002315;
+}
+#navbar>.icons>i{
+    font-size: 33px;
+    color: white;
+}
+i{
+    cursor: pointer;
+}
 
 
+/* *************************************************** Body Styling ******************************************** */
 
-
-
-
-/* <------------************************************************--------------------------> */
-
-
-
-/* body styling */
 .filter{
     width: 80%;
     margin: 15px auto;
@@ -29,7 +96,7 @@ body{
     background: #009B5D;
     color: white;
     height: 50px;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    /* box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
 }
 .filter > .filter-by-price-range{
     width: 50%;
@@ -94,6 +161,9 @@ input::-webkit-inner-spin-button {
     background: white;
     border-radius: 10px;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -144,9 +214,34 @@ input::-webkit-inner-spin-button {
     background: #038350;
 }
 
+ /* button wrapper styling */
+#button-cont{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+ #button-cont > #button-wrapper > button{
+    font-size: 20px;
+    font-weight:400;
+    margin: 5px;
+    padding: 10px;
+    width: 50px;
+    border: none;
+   
+ }
+ #button-cont > #button-wrapper > button:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ }
+
+
+
+
 
 .active{
-    background-color: red;
+    background-color: #009B5D;
+    color: white;
 }
 
 

@@ -1,18 +1,42 @@
+let logo = document.getElementById("logo");
+logo.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+let course = document.getElementById("course");
+course.addEventListener("click",function(){
+    window.location.href = "coursesList.html";
+})
+let bookmark = document.getElementById("bookmark");
+bookmark.addEventListener("click",function(){
+    window.location.href = "bookmark.html";
+})
+let login = document.getElementById("login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+
+
+
+
+
+
+
 let buttonWrapper = document.getElementById("button-wrapper");
 
 $(document).ready(function(){
     $('.carousel').slick({
+    autoplay: true,
     slidesToShow: 3,
     dots:true,
+    speed: 100,
     centerMode: true,
-    infinite: true,
+    
     });
   });
 
   //
 
 function pagination(data, pageNo, limit){
-
     return data.slice((pageNo-1)*limit, (pageNo*limit -1 )+1 )
 } 
 
@@ -23,15 +47,16 @@ async function fetchAPI(){
     try {
         let res = await fetch("https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn");
         let data = await res.json();
+      
+        //pagination
         console.log(data);
         let limit = 6;
-        //
         let total = data.length;
         let totalBtn = Math.ceil(total/limit);
 
-        // buttonWrapper.innerHTML = null;
+        buttonWrapper.innerHTML = null;
         for(let i=1; i<=totalBtn; i++){
-            buttonWrapper.append(createBtn(i, data, limit))
+            buttonWrapper.append(createBtn(i))
         }
 
         let resArr = pagination(data, 1, limit);
@@ -58,6 +83,24 @@ function createCard(item){
     let img = document.createElement("img");
     img.className = "poster"
     img.src = item.avatar;
+    img.style.cursor = "pointer";
+    // image click functionality
+    img.addEventListener("click",function(){
+        const data = JSON.parse(localStorage.getItem("course-view")) || [];
+        if(data.length == 0){
+            data.push(item);
+            localStorage.setItem("course-view", JSON.stringify(data));  
+        }else{
+            data.pop()
+            localStorage.setItem("course-view", JSON.stringify(data));
+            data.push(item);
+            localStorage.setItem("course-view", JSON.stringify(data));
+        }
+        window.open('Product.html', '_blank');
+    })
+
+
+
     let category = document.createElement("p");
     category.className = "category"
     category.textContent = item.category;
@@ -94,6 +137,41 @@ function createCard(item){
     btn1.textContent = "VIEW DETAILS";
     btn2.textContent = "APPLY NOW";
 
+    // view details functionality
+    btn1.addEventListener("click",function(){
+        const data = JSON.parse(localStorage.getItem("course-view")) || [];
+        if(data.length == 0){
+            data.push(item);
+            localStorage.setItem("course-view", JSON.stringify(data));  
+        }else{
+            data.pop()
+            localStorage.setItem("course-view", JSON.stringify(data));
+            data.push(item);
+            localStorage.setItem("course-view", JSON.stringify(data));
+        }
+        window.open('Product.html', '_blank');
+    })
+
+    // apply now functionality
+
+    btn2.addEventListener("click",function(){
+        const data = JSON.parse(localStorage.getItem("applying-course")) || [];
+        if(data.length == 0){
+            data.push(item);
+            localStorage.setItem("applying-course", JSON.stringify(data));  
+        }else{
+            data.pop()
+            localStorage.setItem("applying-course", JSON.stringify(data));
+            data.push(item);
+            localStorage.setItem("applying-course", JSON.stringify(data));
+        }
+        window.open('paymentpage.html', '_blank');
+    })
+
+
+
+
+
     btnDiv.append(btn1,btn2);
     flex1.append(iconImg1,p1);
     flex2.append(iconImg2,p2);
@@ -104,7 +182,7 @@ function createCard(item){
     return card;
 }
 
-function createBtn(i, data, limit){
+function createBtn(i){
     let btn = document.createElement("button");
 
     let activeClass = '';
@@ -113,16 +191,109 @@ function createBtn(i, data, limit){
     }
     btn.className = `.pagination-button ${activeClass}`;
     btn.innerText = i;
-
-
-
-    btn.addEventListener("click",function(){
-        btn.classList.remove('active');
-        btn.className = 'active'
-        console.log(btn)
-        let resArr = pagination(data, i, limit);
-        Display(resArr);
-    })
-
     return btn;
 }
+
+
+setTimeout(async function(){
+    const btns = document.querySelectorAll("#button-wrapper button");
+    let res = await fetch("https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn");
+    let data = await res.json();
+    let limit = 6;
+
+    btns.forEach((btn) => {
+        btn.addEventListener("click",function(){
+            btns.forEach(btnb=> btnb.classList.remove('active'));
+            btn.classList.add("active")
+            let i = btn.innerText;
+            let resArr = pagination(data, i, limit);
+            Display(resArr);
+        })
+    })
+},500)
+
+
+
+// search functionality
+ let searchInput = document.getElementById("search-input")
+ searchInput.addEventListener("input",function(){
+
+    let promise = fetch("https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn");
+    promise.then((res)=>{
+        return res.json();
+    }).then((data)=>{
+        
+        let tempData = data.filter(function(ele){
+            if(ele.name.toLowerCase().includes(searchInput.value.toLowerCase())){
+                return true;
+            }else{
+                false;
+            }
+        })
+        let limit = 6
+        let total = tempData.length;
+        let totalBtn = Math.ceil(total/limit);
+
+        buttonWrapper.innerHTML = null;
+        for(let i=1; i<=totalBtn; i++){
+            buttonWrapper.append(createBtn(i, data, limit))
+        }
+
+        console.log(tempData);
+        let resArr = pagination(tempData, 1, limit);
+        Display(resArr);
+    }).catch((error)=>{
+        console.log(error);
+    })
+ })
+
+ // category filtering
+let selectCategory = document.getElementById("filter-by-category");
+selectCategory.addEventListener("change",function(){
+   if(selectCategory.value == ""){
+    fetchAPI();
+   }else{
+    const url = new URL('https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn');
+    url.searchParams.append('category', `${selectCategory.value}`);
+
+    fetch(url, {
+    method: 'GET',
+    headers: {'content-type':'application/json'},
+    }).then(res => {
+    if (res.ok) {
+        return res.json();
+    }
+    }).then(data => {
+    console.log(data)
+    Display(data)
+    }).catch(error => {
+        console.log(error)
+    })
+   }
+})
+
+// sorting by price
+let sortPrice = document.getElementById("sort-by-price");
+sortPrice.addEventListener("change",function(){
+    if(sortPrice.value == ""){
+        fetchAPI();
+       }else{
+        const url = new URL('https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn');
+        url.searchParams.append('sortBy', 'price');
+        url.searchParams.append('order', `${sortPrice.value}`); // order parameter is optional and will default to `asc`
+        
+        fetch(url, {
+          method: 'GET',
+          headers: {'content-type':'application/json'},
+        }).then(res => {
+          if (res.ok) {
+              return res.json();
+          }
+        }).then(data => {
+          Display(data)
+        }).catch(error => {
+          console.log(error)
+        })
+       }
+})
+
