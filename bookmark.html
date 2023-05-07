@@ -36,21 +36,15 @@
     color: blue;
 }#delete{
     color: red;
-}#nameLogo{
-    margin: auto;
-    width: 40%;
-    display: flex;
+}#images{
     
-
-}#nameLogo>img{
-    width: 20%;
-    margin-left: 10px;
-}.invert{
-    width: 25px;
-}#rating{
     width: 90%;
-    display: flex;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin: auto;
+    margin-top: 20px;
 }
 
     </style>
@@ -79,7 +73,15 @@
              
         </tbody>
     </table>
-    
+
+    <div>
+        <h1>What Our Students Have To Say</h1>
+        <div id="images">
+            <img src="https://ebizfacts.com/wp-content/uploads/2019/12/04-udemy-affiliate-marketing-courses-reviews-01.png" alt="">
+            <img src="https://ebizfacts.com/wp-content/uploads/2019/12/04-udemy-affiliate-marketing-courses-reviews-01.png" alt="">
+            
+        </div>
+    </div>
     
 </body>
 </html>
@@ -128,14 +130,7 @@
             tbody.append(tr)
 
         });
-        let api="https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn"
-        fetch(api)
-        .then((res)=>{
-            return res.json()
-        })
-        .then((data)=>{
-            console.log(data);
-        })
+        
 
     }
 </script>
