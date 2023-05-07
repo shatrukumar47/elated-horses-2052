@@ -17,7 +17,8 @@
         <h1>Admin Panel</h1>
         <div class="search">
             <input type="text" id="search-input" placeholder="Search...">
-            <i class="fas fa-search"></i>
+            <button id="search-button"><i class="fas fa-search"></i></button>
+            
         </div>
         <h1>Dashboard</h1>
     </div>
@@ -29,21 +30,21 @@
             </div>
             <div class="add-course">
                 <h3>List Course</h3>
-                <input type="text" id="title" placeholder="Title">
-                <input type="text"  id="image-link" placeholder="Image URL">
-                <input type="text" id="category" placeholder="Category">
-                <input type="number"  id="price" placeholder="Price">
-                <input type="text"  id="tutor" placeholder="Tutor Name">
+                <input type="text" id="add-title" placeholder="Name">
+                <input type="text"  id="add-image-link" placeholder="Image URL">
+                <input type="text" id="add-category" placeholder="Category">
+                <input type="number"  id="add-price" placeholder="Price">
+                <input type="text"  id="add-tutor" placeholder="Tutor Name">
                 <button id="add-course">Add Course</button>
             </div>
             <div class="update-course">
                 <h3>Update Course Details</h3>
-                <input type="text" id="title" placeholder="Title">
-                <input type="text"  id="image-link" placeholder="Image URL">
-                <input type="text" id="category" placeholder="Category">
-                <input type="number"  id="price" placeholder="Price">
-                <input type="text"  id="tutor" placeholder="Tutor Name">
-                <button id="add-course">Update Course</button>
+                <input type="text" id="update-title" placeholder="Title">
+                <input type="text"  id="update-image-link" placeholder="Image URL">
+                <input type="text" id="update-category" placeholder="Category">
+                <input type="number"  id="update-price" placeholder="Price">
+                <input type="text"  id="update-tutor" placeholder="Tutor Name">
+                <button id="update-button">Update Course</button>
             </div>
             
 
@@ -51,14 +52,17 @@
 
         <div id="product-container">
             <div class="count">
-                <h2>Total Courses = </h2>
-                <h2>Live Courses = </h2>
+                <h2 id="total-courses">Total Courses = </h2>
+                <h2 id="live-courses">Live Courses = </h2>
             </div>
             <div id="product-list">
 
             </div>
         </div>
 
+    </div>
+    <div id="button-cont">
+      <div id="button-wrapper"></div>
     </div>
     
 
