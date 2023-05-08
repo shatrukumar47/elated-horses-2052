@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>bookmark page</title>
+
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
@@ -13,6 +16,7 @@
     <link rel="stylesheet" href="./styles/bookmark.css">
 
     <title>Document</title>
+
     <style>
         *{
     box-sizing: border-box;
@@ -163,6 +167,8 @@ body{
     width: 95%;
     margin: auto;
     text-align: center;
+}#feedback{
+  text-align: center;
 }
 
     </style>
@@ -219,7 +225,7 @@ body{
         </tbody>
     </table>
 
-    <div>
+    <div id="feedback">
         <h1>What Our Students Have To Say</h1>
         <div id="images">
             <img src="https://ebizfacts.com/wp-content/uploads/2019/12/04-udemy-affiliate-marketing-courses-reviews-01.png" alt="">
@@ -382,8 +388,9 @@ body{
 </html>
 <script>
     let tbody=document.querySelector("tbody")
-    let bookmarkData=[]
+    let bookmarkData=JSON.parse(localStorage.getItem("bookmark"))||[]
     let course=JSON.parse(localStorage.getItem("visit-course"))||[]
+    let aplly=JSON.parse(localStorage.getItem("applying-course")) || [];
     DisplayData(bookmarkData)
     function DisplayData(arr){
         arr.forEach((element,ind) => {
@@ -410,10 +417,12 @@ body{
                 return ind!=i
               })
               DisplayData(bookmarkData)
-              localStorage.setItem("abc",JSON.stringify(bookmarkData))
+              localStorage.setItem("bookmark",JSON.stringify(bookmarkData))
             })
 
             td7.addEventListener("click",()=>{
+                 aplly.push(element)
+                 localStorage.setItem("applying-course",JSON.stringify(aplly))
                 window.location.href="../paymentpage.html"
             })
             td6.addEventListener("click",()=>{
