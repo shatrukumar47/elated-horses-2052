@@ -102,7 +102,7 @@ form{
     flex-direction: column;
 }
 form label{
-    color: gray;
+    color: rgb(230, 223, 223);
 }
 form input{
     font-size: 20px;
@@ -156,6 +156,7 @@ img+p{
  background-color: #FFFFFF;
  color:#505050;
  border-width: 2px;
+ cursor:pointer;
 }
 .Continue>div:nth-child(2){
 background-color: #1877f2;
@@ -163,23 +164,25 @@ border-color: #1877f2;
 color: #fff;
 margin: 16px 0px;
 border-width: 2px;
+cursor:pointer;
 }
 .Continue>div:nth-child(2) p{
     margin-left: 12px;
     font-size: 16px;
     font-weight: 1000;
-
 }
 .Continue>div:nth-child(3){
 background-color: #000;
 border-color: #000;
 color: #fff;
 border-width: 1px;
+cursor:pointer;
 }
 #help{
   color: rgba(23, 11, 243, 0.952);
   font-size:16px ;
-  font-weight:500 ;  
+  font-weight:500 ; 
+  cursor:pointer; 
 }
 @media only screen and (max-width:1285px) {
     .logo{
