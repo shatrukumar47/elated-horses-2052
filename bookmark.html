@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./styles/bookmark.css">
+
     <title>Document</title>
     <style>
         *{
@@ -158,10 +166,28 @@ body{
 }
 
     </style>
+
 </head>
 <body>
     <div id="navbar">
         <img src="./image/Learn Fast.png" alt="" id="logo" />
+
+        <div class="search">
+          <input type="text" id="search-input" placeholder="Search...">
+          <i class="fas fa-search"></i>
+      </div>
+        <div class="icons">
+            <a href="./coursesList.html" id="course"> Courses</a>
+          <i class="far fa-bookmark" id="bookmark"></i>
+          <i class="fas fa-user userlogin" id="login"></i>
+          <div id="user-name"></div>
+        </div>
+      </div>
+  
+  
+      <!-- ***************** end navbar*************** -->
+    <div>
+
         <div class="icons">
             <a href="./coursesList.html"> Courses</a>
           <i class="far fa-bookmark"></i>
@@ -169,6 +195,7 @@ body{
         </div>
       </div>
     <div id="broadsel">
+
         <h1>A broad selection of courses</h1>
         <p style="font-size: 18px;">Choose from 213,000 online video courses with new additions published every month</p>
     </div>
@@ -201,6 +228,12 @@ body{
         </div>
     </div>
     
+
+    
+    <!-- ************************Footer************************************************** -->
+
+
+
     <div class="footer">
         <div class="footer-box1">
           <div>
@@ -221,7 +254,11 @@ body{
           <div>
             <h4>DISCOVER MOREs</h4>
             <a href="">Discover Careers</a>
+
+            <a href="">Fast Learn Profile</a>
+
             <a href="">Learn Fast Profile</a>
+
             <a href="">Language</a>
             <a href="">Personal Development</a>
             <a href="">Teaching & Academics</a>
@@ -329,11 +366,18 @@ body{
           <a href="">Your Data and Security</a>
           <a href="">Grievance Redressal</a>
         </div>
+
+        <div id="copyright">© Copyright Fast Learn</div>
+
         <div id="copyright">© Copyright Learn Fast</div>
+
         <br />
         <br />
         <br />
             </div>
+
+
+
 </body>
 </html>
 <script>
@@ -380,8 +424,8 @@ body{
             tr.append(td1,td2,td3,td4,td5,td6,td7,td8)
             tbody.append(tr)
 
-        });
-        
 
-    }
-</script>
+
+    <script src="./scripts/bookmark.js"></script>
+</body>
+</html>

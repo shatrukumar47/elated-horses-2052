@@ -1,0 +1,5 @@
+###
+GET https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn/1
+
+###
+OPTIONS  https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn

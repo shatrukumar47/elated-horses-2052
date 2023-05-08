@@ -61,10 +61,11 @@ input[placeholder="Search..."]::placeholder{
     bottom: 10px;
 }
 #navbar>.icons{
-    width: 300px;
+    width: 500px;
     display: flex;
     justify-content: space-around;
     margin-right: 30px;
+    align-items: center;
 }
 #navbar > .icons> a{
     display: block;
@@ -82,6 +83,24 @@ input[placeholder="Search..."]::placeholder{
 }
 i{
     cursor: pointer;
+}
+#navbar>.icons > #user-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#navbar>.icons > #user-name{
+    color: white;
+}
+#navbar>.icons > #user-name> .logout-button{
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px;
+    background: #009B5D;
+    color: white;
+    cursor: pointer;
+    font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
 
 

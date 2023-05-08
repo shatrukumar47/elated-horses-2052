@@ -15,7 +15,28 @@ login.addEventListener("click",function(){
     window.location.href = "login.html";
 })
 
+let users=JSON.parse(localStorage.getItem("login"));
+let userNameDiv = document.getElementById("user-name")
+if(users != undefined){
+    let login = document.getElementById("login");
+    login.style.display = "none"
+    let h4 = document.createElement("h2");
+    let logOut = document.createElement("button");
+    logOut.className = "logout-button";
+    logOut.innerText = "Log Out"
 
+    logOut.addEventListener("click",function(){
+        // console.log("hello")
+        localStorage.removeItem("login")
+        window.location.href = "index.html";
+    })
+    h4.className = "user-name";
+    h4.innerText = `👱🏻 ${users.firstName}`;
+    userNameDiv.append(h4,logOut);
+    
+}else{
+    userNameDiv.style.display = "none";
+}
 
 
 
