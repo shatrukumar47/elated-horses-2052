@@ -1,3 +1,49 @@
+let logo = document.getElementById("logo");
+logo.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+let course = document.getElementById("course");
+course.addEventListener("click",function(){
+    window.location.href = "coursesList.html";
+})
+let bookmark = document.getElementById("bookmark");
+bookmark.addEventListener("click",function(){
+    window.location.href = "bookmark.html";
+})
+let login = document.getElementById("login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+
+let users=JSON.parse(localStorage.getItem("login"));
+let userNameDiv = document.getElementById("user-name")
+if(users != undefined){
+    let h4 = document.createElement("h2");
+    let logOut = document.createElement("button");
+    logOut.className = "logout-button";
+    logOut.innerText = "Log Out"
+
+    logOut.addEventListener("click",function(){
+        // console.log("hello")
+        localStorage.removeItem("login")
+        window.location.href = "index.html";
+    })
+
+
+
+    h4.className = "user-name";
+    h4.innerText = `👱🏻 ${users.firstName}`;
+    userNameDiv.append(h4,logOut);
+}else{
+    userNameDiv.style.display = "none";
+}
+
+// end of navbar functionalities
+
+
+
+
+
 let mainSection = document.getElementById("container");
 let coursedata = JSON.parse(localStorage.getItem("course-view"));
 console.log(coursedata);
@@ -35,7 +81,15 @@ function createCard(item) {
     category.className = "category"
     category.innerText = `CATEGORY : ${item.category}`;
 
-    imgdiv.append(title, category, duration)
+    let price = document.createElement("h5");
+    price.className = "price";
+    price.innerText = `PRICE : ₹${item.price}`;
+
+    let info = document.createElement("h5");
+    info.className = "info";
+    info.innerText = `DETAILS : ${item.details}`;
+
+    imgdiv.append(title, category, duration, price, info)
     card_div.append(img, imgdiv);
     // ------------------------------------------------------//
 
@@ -81,13 +135,9 @@ function createCard(item) {
     img2.src = item.tutore2_Image;
     divTutor2.append(img2, tutor2);
 
-    let info = document.createElement("div");
-    info.className = "info";
-    info.innerText = `DETAILS : ${item.details}`;
+    
 
-    let price = document.createElement("p");
-    price.className = "price";
-    price.innerText = `PRICE : ₹${item.price}`;
+    
 
 
 
@@ -101,8 +151,6 @@ function createCard(item) {
     btn1.addEventListener("click", bookmarkData);
 
     function bookmarkData() {
-        event.preventDefault();        
-
         let lsdata = JSON.parse(localStorage.getItem("bookmark")) || [];
         
         lsdata.push(item);
@@ -116,19 +164,23 @@ function createCard(item) {
     btn2.addEventListener("click", payment);
 
     function payment() {
-        event.preventDefault();        
-
-        let lsdata2 = JSON.parse(localStorage.getItem("payment")) || [];
-        
-        lsdata2.push(item);
-        localStorage.setItem("payment", JSON.stringify(lsdata2));
-        window.location.href="http://127.0.0.1:5500/paymentpage.html";
+        const data = JSON.parse(localStorage.getItem("applying-course")) || [];
+        if(data.length == 0){
+            data.push(item);
+            localStorage.setItem("applying-course", JSON.stringify(data));  
+        }else{
+            data.pop()
+            localStorage.setItem("applying-course", JSON.stringify(data));
+            data.push(item);
+            localStorage.setItem("applying-course", JSON.stringify(data));
+        }
+        window.open('paymentpage.html', '_blank');
     }
 
 
     buttons.append(btn1, btn2);
     tutorCont.append(divTutor1, divTutor2)
-    card_box.append(tutorCont, info, price)
+    card_box.append(tutorCont)
 
     card.append(card_div, banner, card_box, buttons);
 

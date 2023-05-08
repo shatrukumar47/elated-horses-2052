@@ -5,174 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>bookmark page</title>
-
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
     />
     <title>Bookmark</title>
     <link rel="stylesheet" href="./styles/bookmark.css">
-
-    <title>Document</title>
-
-    <style>
-        *{
-    box-sizing: border-box;
-}
-body{
-    padding: 0;
-    margin: 0;
-    font-family:  "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-        #navbar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #52C1F8;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-    padding: 5px;
-    
-}
-#navbar  img{
-    width: 100px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-#navbar img:hover{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-}
-
-#navbar>.icons{
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    margin-right: 30px;
-}
-#navbar > .icons> a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 25px;
-}
-#navbar > .icons> a:hover{
-    color: #002315;
-}
-#navbar>.icons>i{
-    font-size: 33px;
-    color: white;
-}
-#customers {
-    width: 95%;
-    margin: auto;
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  
-  margin-top: 20px;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}#review{
-    width: 95%;
-}#review>img{
-   width: 100%;
-}#view{
-    color: blue;
-}#delete{
-    color: red;
-}#images{
-    
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    margin: auto;
-    margin-top: 20px;
-}
-.footer{
-    width: 100%;
-    background: #F5F5F5;
-    margin-top: 50px;
-}
-.footer>.footer-box1{
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 10px;
-    margin-top: 10px;
-    padding-top: 20px;
-}
-.footer>.footer-box1>div>a{
-    display: block;
-    line-height: 24px;
-    text-decoration: none;
-    color: #777977;
-}
-.footer>.footer-box1>div:last-child>img{
-    width: 70%;
-}
-
-.footer>.payment-partners{
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 70% 30% ;
-    gap: 20px;
-}
-.footer>.payment-partners>div>div>img{
-    width: 76px;
-}
-.footer>.payment-partners>div:last-child > div > img{
-    width: 46px;
-}
-.footer>.terms-cond{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-.footer>.terms-cond>a{
-    display: block;
-    line-height: 24px;
-    text-decoration: none;
-    color: #777977;
-}
-.footer>#copyright{
-    text-align: center;
-    margin: 20px;
-    line-height: 24px;
-    color: #777977;
-}#broadsel{
-    width: 95%;
-    margin: auto;
-    text-align: center;
-}#feedback{
-  text-align: center;
-}
-
-    </style>
-
 </head>
 <body>
     <div id="navbar">
@@ -189,20 +27,11 @@ body{
           <div id="user-name"></div>
         </div>
       </div>
-  
-  
+
       <!-- ***************** end navbar*************** -->
-    <div>
-
-        <div class="icons">
-            <a href="./coursesList.html"> Courses</a>
-          <i class="far fa-bookmark"></i>
-          <i class="fas fa-user userlogin"></i>
-        </div>
-      </div>
+      
     <div id="broadsel">
-
-        <h1>A broad selection of courses</h1>
+        <h1>A Broad Selection of Courses</h1>
         <p style="font-size: 18px;">Choose from 213,000 online video courses with new additions published every month</p>
     </div>
     <table id="customers">
@@ -234,11 +63,7 @@ body{
         </div>
     </div>
     
-
-    
     <!-- ************************Footer************************************************** -->
-
-
 
     <div class="footer">
         <div class="footer-box1">
@@ -382,59 +207,7 @@ body{
         <br />
             </div>
 
-
-
+ <script src="./scripts/bookmark.js"></script>
 </body>
 </html>
-<script>
-    let tbody=document.querySelector("tbody")
-    let bookmarkData=JSON.parse(localStorage.getItem("bookmark"))||[]
-    let course=JSON.parse(localStorage.getItem("visit-course"))||[]
-    let aplly=JSON.parse(localStorage.getItem("applying-course")) || [];
-    DisplayData(bookmarkData)
-    function DisplayData(arr){
-        arr.forEach((element,ind) => {
-            let tr=document.createElement("tr")
-            let td1=document.createElement("td")
-            let td2=document.createElement("td")
-            td2.innerText=element.name
-            let td3=document.createElement("td")
-            td3.innerText=element.duration
-            let td4=document.createElement("td")
-            td4.innerText=element.price
-            let td5=document.createElement("td")
-            td5.innerText=element.tutore1
-            let td6=document.createElement("td")
-            td6.innerText="View"
-            let td7=document.createElement("td")
-            td6.className="view"
-            td7.innerText="Buy Now"
-            let td8=document.createElement("td")
-            td8.className="delete"
-            td8.innerText="Delete"
-            td8.addEventListener("click",()=>{
-              let bookmarkData=bookmarkData.filter((ele,i)=>{
-                return ind!=i
-              })
-              DisplayData(bookmarkData)
-              localStorage.setItem("bookmark",JSON.stringify(bookmarkData))
-            })
 
-            td7.addEventListener("click",()=>{
-                 aplly.push(element)
-                 localStorage.setItem("applying-course",JSON.stringify(aplly))
-                window.location.href="../paymentpage.html"
-            })
-            td6.addEventListener("click",()=>{
-                course.push(element)
-                localStorage.setItem("visit-course",JSON.stringify(course))
-                window.location.href="../Product.html"
-            })
-            tr.append(td1,td2,td3,td4,td5,td6,td7,td8)
-            tbody.append(tr)
-
-
-
-    <script src="./scripts/bookmark.js"></script>
-</body>
-</html>

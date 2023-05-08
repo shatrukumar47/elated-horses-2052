@@ -176,17 +176,24 @@ function createCard(item){
     // apply now functionality
 
     btn2.addEventListener("click",function(){
-        const data = JSON.parse(localStorage.getItem("applying-course")) || [];
-        if(data.length == 0){
-            data.push(item);
-            localStorage.setItem("applying-course", JSON.stringify(data));  
+
+        let users=JSON.parse(localStorage.getItem("login"));
+        if(users == undefined){
+            window.location.href = "login.html";
         }else{
-            data.pop()
-            localStorage.setItem("applying-course", JSON.stringify(data));
-            data.push(item);
-            localStorage.setItem("applying-course", JSON.stringify(data));
+            const data = JSON.parse(localStorage.getItem("applying-course")) || [];
+            if(data.length == 0){
+                data.push(item);
+                localStorage.setItem("applying-course", JSON.stringify(data));  
+            }else{
+                data.pop()
+                localStorage.setItem("applying-course", JSON.stringify(data));
+                data.push(item);
+                localStorage.setItem("applying-course", JSON.stringify(data));
+            }
+            window.open('paymentpage.html', '_blank');
         }
-        window.open('paymentpage.html', '_blank');
+ 
     })
 
 
@@ -214,7 +221,6 @@ function createBtn(i){
     btn.innerText = i;
     return btn;
 }
-
 
 setTimeout(async function(){
     const btns = document.querySelectorAll("#button-wrapper button");
