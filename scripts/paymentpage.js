@@ -39,6 +39,9 @@ function checkOTP(){
         let thankyouImg = document.querySelector(".thankyou-img");
         paymentCont.style.display = "none";
         thankyouImg.style.display = "block"
+        setTimeout(function(){
+            window.location.href = "coursesList.html"
+        },2000)
     }else{
         alert("Wrong OTP");
     }
