@@ -4,52 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 20px;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}#review{
-    width: 95%;
-}#review>img{
-   width: 100%;
-}#view{
-    color: blue;
-}#delete{
-    color: red;
-}#images{
-    
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    margin: auto;
-    margin-top: 20px;
-}
-
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./styles/bookmark.css">
 </head>
 <body>
+    <div id="navbar">
+        <img src="./image/Learn Fast.png" alt="" id="logo" />
+        <div class="search">
+          <input type="text" id="search-input" placeholder="Search...">
+          <i class="fas fa-search"></i>
+      </div>
+        <div class="icons">
+            <a href="./coursesList.html" id="course"> Courses</a>
+          <i class="far fa-bookmark" id="bookmark"></i>
+          <i class="fas fa-user userlogin" id="login"></i>
+          <div id="user-name"></div>
+        </div>
+      </div>
+  
+  
+      <!-- ***************** end navbar*************** -->
     <div>
         <h1>A broad selection of courses</h1>
         <p style="font-size: 18px;">Choose from 213,000 online video courses with new additions published every month</p>
@@ -83,54 +61,145 @@
         </div>
     </div>
     
+    
+    <!-- ************************Footer************************************************** -->
+
+    <div class="footer">
+        <div class="footer-box1">
+          <div>
+            <h4>Company</h4>
+            <a href="">About Us</a>
+            <a href="">Careers</a>
+            <a href="">Blogs</a>
+            <a href="">Terms and conditions</a>
+          </div>
+          <div>
+            <h4>Useful Links</h4>
+            <a href="">User Guidelines</a>
+            <a href="">Site Map</a>
+            <a href="">Refund Policy</a>
+            <a href="">Takedown Policy</a>
+            <a href="">Grievance Redressal</a>
+          </div>
+          <div>
+            <h4>DISCOVER MOREs</h4>
+            <a href="">Discover Careers</a>
+            <a href="">Fast Learn Profile</a>
+            <a href="">Language</a>
+            <a href="">Personal Development</a>
+            <a href="">Teaching & Academics</a>
+            <a href="">>Media Centre</a>
+          </div>
+          <div>
+            <h4>Need Help?</h4>
+            <a href="">FAQs</a>
+            <a href="">Policies</a>
+            <a href="">Contact Us</a>
+          </div>
+          <div>
+            <h4>Download our App</h4>
+            <img
+              src="https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-apple-appstore-logo_2x.png"
+              alt=""
+            />
+            <img
+              src="https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-google-playstore-logo_2x.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <hr />
+        <div class="payment-partners">
+          <div>
+            <h4>We Accept</h4>
+            <div>
+              <img
+                src="https://ii2.pepperfry.com/assets/w23-pf-visa.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii3.pepperfry.com/assets/w23-pf-master-card.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii1.pepperfry.com/assets/w23-pf-maestro.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii2.pepperfry.com/assets/w23-pf-american-express.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii3.pepperfry.com/assets/w23-pf-rupay.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii2.pepperfry.com/assets/w23-pf-dinners-club.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii3.pepperfry.com/assets/w23-pf-wallet.jpg"
+                alt=""
+              />
+              <img
+                src="https://ii3.pepperfry.com/assets/w23-pf-net-banking.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <h4>Follow us Here</h4>
+            <div>
+              <img
+                src="https://ii1.pepperfry.com/assets/w23-pf-social-insta.png"
+                alt=""
+              />
+              <img
+                src="https://ii1.pepperfry.com/assets/w23-pf-social-fb.png"
+                alt=""
+              />
+              <img
+                src="https://ii2.pepperfry.com/assets/w23-pf-social-pinterest.png"
+                alt=""
+              />
+              <img
+                src="https://ii1.pepperfry.com/assets/w23-pf-social-linkedin.png"
+                alt=""
+              />
+              <img
+                src="https://ii3.pepperfry.com/assets/w23-pf-social-youtube.png"
+                alt=""
+              />
+              <img
+                src="https://ii1.pepperfry.com/assets/w23-pf-social-twitter.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <hr />
+        <div class="terms-cond">
+          <a href="">Whitechat</a>
+          <a href="">Sitemap</a>
+          <a href="">Terms Of Use</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Your Data and Security</a>
+          <a href="">Grievance Redressal</a>
+        </div>
+        <div id="copyright">© Copyright Fast Learn</div>
+        <br />
+        <br />
+        <br />
+            </div>
+
+
+
+    <script src="./scripts/bookmark.js"></script>
 </body>
 </html>
-<script>
-    let tbody=document.querySelector("tbody")
-    let bookmarkData=[]
-    let course=JSON.parse(localStorage.getItem("visit-course"))||[]
-    DisplayData(bookmarkData)
-    function DisplayData(arr){
-        arr.forEach((element,ind) => {
-            let tr=document.createElement("tr")
-            let td1=document.createElement("td")
-            let td2=document.createElement("td")
-            td2.innerText=element.name
-            let td3=document.createElement("td")
-            td3.innerText=element.duration
-            let td4=document.createElement("td")
-            td4.innerText=element.price
-            let td5=document.createElement("td")
-            td5.innerText=element.tutore1
-            let td6=document.createElement("td")
-            td6.innerText="View"
-            let td7=document.createElement("td")
-            td6.className="view"
-            td7.innerText="Buy Now"
-            let td8=document.createElement("td")
-            td8.className="delete"
-            td8.innerText="Delete"
-            td8.addEventListener("click",()=>{
-              let bookmarkData=bookmarkData.filter((ele,i)=>{
-                return ind!=i
-              })
-              DisplayData(bookmarkData)
-              localStorage.setItem("abc",JSON.stringify(bookmarkData))
-            })
-
-            td7.addEventListener("click",()=>{
-                window.location.href="../payment.html"
-            })
-            td6.addEventListener("click",()=>{
-                course.push(element)
-                localStorage.setItem("visit-course",JSON.stringify(course))
-                window.location.href="../bookView.html"
-            })
-            tr.append(td1,td2,td3,td4,td5,td6,td7,td8)
-            tbody.append(tr)
-
-        });
-        
-
-    }
-</script>

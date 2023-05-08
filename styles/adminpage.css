@@ -205,6 +205,10 @@ input[placeholder="Search..."]::placeholder{
  }
 
 
+ .active{
+    background-color: #009B5D;
+    color: white;
+}
 
 
 

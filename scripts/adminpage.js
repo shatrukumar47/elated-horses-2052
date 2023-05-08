@@ -135,15 +135,40 @@ function Display(data){
 }
 
 function createBtn(i){
-    let btn = document.createElement("button");
-    btn.className = `.pagination-button`;
-    btn.innerText = i;
+    // let btn = document.createElement("button");
+    // btn.className = `.pagination-button`;
+    // btn.innerText = i;
 
-    btn.addEventListener("click",function(){
-      fetchAPI(i)
-    })
+    // btn.addEventListener("click",function(){
+    //   fetchAPI(i)
+    // })
+    // return btn;
+
+    let btn = document.createElement("button");
+
+    let activeClass = '';
+    if(i==1){
+        activeClass = 'active';
+    }
+    btn.className = `.pagination-button ${activeClass}`;
+    btn.innerText = i;
     return btn;
 }
+
+setTimeout(async function(){
+    const btns = document.querySelectorAll("#button-wrapper button");
+        console.log(btns)
+        btns.forEach((btn) => {
+            btn.addEventListener("click",function(){
+                btns.forEach(btnb=> btnb.classList.remove('active'));
+                btn.classList.add("active")
+                let i = btn.innerText;
+                fetchAPI(i)
+            })
+        })
+       
+},500)
+
 
 function createCard(item){
     let card = document.createElement("div");
@@ -213,22 +238,27 @@ let searchBtn = document.getElementById("search-button")
 
 searchBtn.addEventListener("click",function(){
 
-    const url = new URL('https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn');
-    url.searchParams.append('name', searchInput.value);
-    
-    fetch(url, {
-      method: 'GET',
-      headers: {'content-type':'application/json'},
-    }).then(res => {
-      if (res.ok) {
-          return res.json();
-      }
+    if(!searchInput.value){
+        fetchAPI(1);
+    }else{
+        const url = new URL('https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn');
+        url.searchParams.append('name', searchInput.value);
+        
+        fetch(url, {
+          method: 'GET',
+          headers: {'content-type':'application/json'},
+        }).then(res => {
+          if (res.ok) {
+              return res.json();
+          }
+       
+        }).then(data => {
+            console.log(data);
+            Display(data);
+        }).catch(error => {
+            console.log(error)
+        })
+    }
    
-    }).then(data => {
-        console.log(data);
-        Display(data);
-    }).catch(error => {
-        console.log(error)
-    })
 })
 
