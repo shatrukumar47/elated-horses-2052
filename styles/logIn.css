@@ -8,7 +8,7 @@ body {
 .container{
     display :flex ;
     justify-content: space-around;
-    margin: auto;
+    margin: 100px auto;
     max-width: 1280px;
     height: 662px;
 }
@@ -179,10 +179,14 @@ border-width: 1px;
 cursor:pointer;
 }
 #help{
-  color: rgba(23, 11, 243, 0.952);
-  font-size:16px ;
-  font-weight:500 ; 
-  cursor:pointer; 
+    display: block;
+    text-align: center;
+     color: rgba(23, 11, 243, 0.952);
+    margin-top: 20px;
+     font-size:20px ;
+    font-weight:500 ; 
+    cursor:pointer; 
+    font-weight: bold;
 }
 @media only screen and (max-width:1285px) {
     .logo{

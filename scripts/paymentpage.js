@@ -1,3 +1,11 @@
+let users=JSON.parse(localStorage.getItem("login"));
+let displayUserName = document.getElementById("display-user-name")
+if(users != undefined){
+    displayUserName.innerText = `👱🏻 Hi ! ${users.firstName}`;
+}
+
+
+
 let form = document.querySelector("form");
 let applyData = JSON.parse(localStorage.getItem("applying-course")) || [];
 

@@ -18,6 +18,7 @@ login.addEventListener("click",function(){
 let users=JSON.parse(localStorage.getItem("login"));
 let userNameDiv = document.getElementById("user-name")
 if(users != undefined){
+    login.style.display = "none"
     let h4 = document.createElement("h2");
     let logOut = document.createElement("button");
     logOut.className = "logout-button";

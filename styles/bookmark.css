@@ -105,51 +105,74 @@ i{
 
 
 /* *************************************************** Body Styling ******************************************** */
-
+#broadsel{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+#broadsel > p{
+    font-weight: bold;
+}
 #customers {
+    background: white;
+    width: 95%;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
     margin-top: 20px;
-  }
-  
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }#review{
-      width: 95%;
-  }#review>img{
-     width: 100%;
-  }#view{
-      color: blue;
-  }#delete{
-      color: red;
-  }#images{
-      
-      width: 90%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 10px;
-      margin: auto;
-      margin-top: 20px;
 }
 
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
+#customers tr:nth-child(even){
+    background-color: #f2f2f2;
+}
 
+#customers tr:hover {
+    background-color: #ddd;
+}
 
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+#review{
+    width: 95%;
+}
+#review>img{
+   width: 100%;
+}
+#view{
+    color: blue;
+}
+#delete{
+    color: red;
+}
+#images{
+    
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+#feedback{
+    text-align: center;
+    color: white;
+}
+#feedback > #images{
+    width: 100%;
+    background: white;
+}
 /* <--------------------------Footer Styling--------------------------------------------------------> */
 
 .footer{
@@ -209,3 +232,4 @@ i{
     line-height: 24px;
     color: #777977;
 }
+
