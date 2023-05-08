@@ -103,32 +103,36 @@ function fetchAPI(pageNumber){
         }).catch((err)=>{
             console.log(err)
         })
+}
 
-
-        const url = new URL('https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn');
-        url.searchParams.append('completed', false);
-        url.searchParams.append('page', pageNumber);
-        url.searchParams.append('limit', 8);
-
-        fetch(url, {
-        method: 'GET',
-        headers: {'content-type':'application/json'},
-        }).then(res => {
-        if (res.ok) {
-            return res.json();
-        }
-       
-        }).then(data => {
-            console.log(data)
-            Display(data);
-        }).catch(error => {
-        console.log(error)
-        })
+const loaderElm = document.querySelector(".loader-circle");
+function fetchAPIforPagination(pageNumber){
+    const url = new URL('https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn');
+    url.searchParams.append('completed', false);
+    url.searchParams.append('page', pageNumber);
+    url.searchParams.append('limit', 8);
+    fetch(url, {
+    method: 'GET',
+    headers: {'content-type':'application/json'},
+    }).then(res => {
+    if (res.ok) {
+        return res.json();
+    }
+   
+    }).then(data => {
+        loaderElm.style.display = 'none';
+        cardContainer.style.display = 'grid';
+        Display(data);
+        
+    }).catch(error => {
+    console.log(error)
+    })
 }
 
 
 function Display(data){
     cardContainer.innerHTML = null;
+
     data.forEach(function(item){
         cardContainer.append(createCard(item))
     })
@@ -154,20 +158,6 @@ function createBtn(i){
     btn.innerText = i;
     return btn;
 }
-
-setTimeout(async function(){
-    const btns = document.querySelectorAll("#button-wrapper button");
-        console.log(btns)
-        btns.forEach((btn) => {
-            btn.addEventListener("click",function(){
-                btns.forEach(btnb=> btnb.classList.remove('active'));
-                btn.classList.add("active")
-                let i = btn.innerText;
-                fetchAPI(i)
-            })
-        })
-       
-},500)
 
 
 function createCard(item){
@@ -262,3 +252,20 @@ searchBtn.addEventListener("click",function(){
    
 })
 
+setTimeout(async function(){
+    const btns = document.querySelectorAll("#button-wrapper button");
+        console.log(btns)
+        btns.forEach((btn) => {
+            btn.addEventListener("click",function(){
+                btns.forEach(btnb=> btnb.classList.remove('active'));
+                btn.classList.add("active")
+                let i = btn.innerText;
+                cardContainer.style.display = 'none';
+                loaderElm.style.display = 'block';
+                fetchAPIforPagination(i)
+            })
+        })
+       
+},800)
+
+fetchAPIforPagination(1)

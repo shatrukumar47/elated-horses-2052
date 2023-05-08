@@ -82,6 +82,8 @@ async function fetchAPI(){
 
         let resArr = pagination(data, 1, limit);
         Display(resArr);
+        // cardContainer.style.display = 'none';
+        loaderElm.style.display = 'none';
     } catch (error) {
         console.log(error)
     }
@@ -215,7 +217,7 @@ function createBtn(i){
     return btn;
 }
 
-
+const loaderElm = document.querySelector(".loader-circle");
 setTimeout(async function(){
     const btns = document.querySelectorAll("#button-wrapper button");
     let res = await fetch("https://64537452c18adbbdfe9daf61.mockapi.io/learn/learn");
