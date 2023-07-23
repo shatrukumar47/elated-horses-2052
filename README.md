@@ -7,7 +7,7 @@ A collaborative project to build E-Learning Languages App
 ###
 The name of website is **"Learn Fast"** , it is based on online e-learning website where we can see the courses based on languages.
 ##
-This is an collaborative project built by **4 members** withing a **span of 5 days** during the **Contstruct Week in Masai School in Unit-3**. This project is to test and showcase the knowledge which me and my team has learned in current unit and unit before. 
+This is a collaborative project built by **4 members** withing a **span of 5 days** during the **Contstruct Week in Masai School in Unit-3**. This project is to test and showcase the knowledge which me and my team has learned in current unit and unit before. 
 ###
 The website has been built by the imagination of the team by taking inspiration from many e-learning websites but the main theme is based on the given template which was provided to us during Contstruct Week.
 ###
